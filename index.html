@@ -19,7 +19,7 @@
     overflow: hidden;
     font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
     position: fixed;
-    z-index: 0 ;
+    z-index: 1 ;
   }
   .topnav a {
     float: left;
@@ -29,25 +29,25 @@
     text-decoration: none;
     font-size: 17px;
     border-width: 0;
-    z-index: 0;
+    z-index: 1;
   }
   .topnav a:hover {
     background-color: #ddd;
     color: black;
     border-width: 0;
-    z-index: 0;
+    z-index: 1;
   }
   .topnav a.active {
     background-color: #f5755a;
     color: white;
     border-width: 0;
-    z-index: 0;
+    z-index: 1;
   }
   .square {
     height: 50px;
     width: 1920px;
     background-color: #333;
-    z-index: -1;
+    z-index: 0;
     position: fixed;
   }
   .dropbtn {
@@ -67,7 +67,7 @@
     background-color: #f1f1f1;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    z-index: 2;
   }
   .dropdown-content a {
     color: black;
@@ -135,6 +135,7 @@
     width:100%;
     height: 50%;
     opacity: 0.50;
+    z-index: 2;
   }
   .centered2 {
     position: absolute;
@@ -144,16 +145,49 @@
     opacity: 1;
     color: white;
     text-align: center;
+    z-index: 3;
   }
 /*slide-Menu Info*/
-.square2{
-  width: 100%;
-  height:250px;
-  position: relative;
-  background-color: aqua;
-  border-style: none;
-}
-</style>
+  .separator2 {
+    width: 100%;
+    height: 25px;
+    background-color: #000;
+
+  }
+  .container1 {
+    display: flex;
+    height: 300px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border: none; /* Remove any border if added */
+  }
+
+  .text1 {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    margin: 0; /* Ensure there's no margin */
+  }
+
+  .image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 0; /* Ensure there's no margin */
+  }
+
+  .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block; /* Remove any space below the image */
+  }
+
+  </style>
 <!--Main Page-->
 <head>
   <link rel="icon" href="/Icon/favicon.ico">
@@ -176,6 +210,10 @@
 <body>
   <!--Main - Upper-->
   <div class="slideshow-container">
+    <div class="centered2">
+      <h1>Savory Haven</h1>
+      <p>#1 most favorite restaurant in the entire world</p>
+    </div>
     <div class="mySlides slide">
       <img src="Restorant Pictures\Restorant 3.jpg" style="width:100%">
     </div>
@@ -186,15 +224,12 @@
       <img src="Restorant Pictures\Restorant 3.jpg" style="width:100%">
     </div>
     <div class="centered"></div>
-    <div class="centered2">
-        <h1>Savory Haven</h1>
-        <p>#1 most favorite restaurant in the entire world</p>
-    </div>
     <div style="text-align:center">
       <span class="dot"></span>
       <span class="dot"></span>
       <span class="dot"></span>
     </div>
+  </div>
   <script>
     let slideIndex = 0;
     showSlides();
@@ -215,7 +250,73 @@
     setTimeout(showSlides, 7500); // Change image every 2 seconds
     }
   </script>
-  <div class="square2"></div>
+  <div class="separator"></div>
+  <div class="container1">
+    <div class="text1">
+        <h2>Fried chicken</h2>
+        <p>
+          Indulge in the ultimate comfort food experience with our crispy, golden fried chicken! Each piece is perfectly seasoned and fried to a mouthwatering crunch, locking in juicy flavor that will leave you craving more. Served hot and fresh, our fried chicken is paired with homemade sides that elevate your meal to a whole new level. Whether you’re enjoying a casual lunch or a family dinner, our chicken is sure to satisfy your taste buds. Come taste the tradition—your next favorite meal is just a bite away!
+        <br>
+        <br>
+          At our restaurant, we believe that great food brings people together. That's why our fried chicken is crafted with love and care, using only the freshest ingredients and a secret blend of spices that guarantees every bite is packed with flavor. Choose from classic Southern-style or try our spicy variations for a kick that will tantalize your palate.
+        <br>
+        <br>
+          Don’t forget to pair your chicken with our signature sides—creamy coleslaw, buttery cornbread, and crispy fries that are the perfect complement to your feast. And for those with a sweet tooth, our homemade desserts are the cherry on top!
+        <br>
+        <br>
+          Join us today and discover why our fried chicken has everyone raving. Grab your friends and family, and dive into a plate of happiness. You won’t want to miss this delicious experience!
+        </p>
+    </div>
+    <div class="image">
+        <img src="Food\Fried Chicken.jpeg" alt="Fied Chicken">
+    </div>
+  </div>
+  <div class="container1">
+      <div class="image">
+          <img src="Food\Fried Rice.jpg" alt="Fried Rice">
+      </div>
+      <div class="text1">
+        <h2>Fried Rice</h2>
+        <p>
+          Indulge in our mouthwatering fried rice,
+        <br>
+        <br>
+          a delightful medley of perfectly cooked grains tossed with vibrant vegetables, succulent proteins, and a symphony of savory sauces.
+        <br>
+        <br>
+          Each bite bursts with flavor, from the rich umami of soy sauce to the fragrant hints of garlic and ginger.
+        <br>
+        <br>
+          Customizable to your liking, choose from an array of options including tender chicken, shrimp, or a vibrant mix of fresh veggies, ensuring every plate is a personalized masterpiece.
+        <br>
+        <br>
+          Whether you're seeking a satisfying lunch or a hearty dinner, our fried rice is not just a dish—it's an experience that will transport your taste buds to a world of culinary bliss.
+        <br>
+        <br>
+          Join us today and savor the essence of comfort food redefined!
+        </p>
+      </div>
+  </div>
+  <div class="container1">
+    <div class="text1">
+      <h2>Thai Tea</h2>
+      <p>Experience the calming allure of our exquisite tea,
+      <br>
+      <br> a soothing blend of carefully sourced leaves that promise to invigorate your senses.
+      <br>
+      <br> Each cup offers a journey through aromatic flavors, from the robust notes of black tea to the delicate whispers of green and herbal infusions.
+      <br>
+      <br> Perfectly brewed and served hot or iced, our tea selection caters to every mood and moment.
+      <br>
+      <br> Whether you seek a refreshing afternoon pick-me-up or a cozy evening companion, our tea is a delightful ritual that elevates your day.
+      <br>
+      <br> Join us and let each sip transport you to a serene oasis of flavor!
+      </p>
+    </div>
+    <div class="image">
+        <img src="Food\Thai Tea.webp" alt="Sample Image">
+    </div>
+  </div>
 </body>
 <footer>
 </footer>
