@@ -1,247 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Savory Haven</title>
-    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
-    <link rel="icon" href="/Icon/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Open Sans', sans-serif;
-            background-color: #f4f4f4;
-        }
+	<head>
+		<title>Savory Haven</title>
+		<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+		<link rel="icon" href="/Icon/favicon.ico">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+			html, body {
+				margin: 0;
+				padding: 0;
+				font-family: 'Open Sans', sans-serif;
+				background-color: #f4f4f4;
+			}
+			/* Redesigned Navigation Bar */
+				.topnav {
+				height: 60px;
+				background-color: #333;
+				display: flex;
+				align-items: center;
+				padding: 0 20px;
+				position: sticky;
+				top: 0;
+				width: 100%;
+				z-index: 1;
+				box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+			}
+			.topnav a {
+				color: #f2f2f2;
+				text-decoration: none;
+				font-size: 18px;
+				padding: 14px 20px;
+				transition: background-color 0.3s, color 0.3s;
+				margin-right: 15px;
+			border-radius: 5px;
+			}
+			.topnav a:hover {
+				background-color: #f5755a;
+				color: white;
+			}
+			.topnav a.active {
+				background-color: #f5755a;
+				color: white;
+			}
+			.dropdown {
+				position: relative;
+			}
+			.dropbtn {
+				background-color: #333;
+				color: white;
+				padding: 14px 20px;
+				border: none;
+				cursor: pointer;
+				font-size: 18px;
+				border-radius: 5px;
+				transition: background-color 0.3s;
+			}
+				.dropdown:hover .dropbtn {
+				background-color: #f5755a;
+			}
+			.dropdown-content {
+				display: none;
+				position: absolute;
+				background-color: #f1f1f1;
+				min-width: 160px;
+				box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+				z-index: 1;
+				border-radius: 5px;
+			}
+			.dropdown-content a {
+				color: black;
+				padding: 12px 16px;
+				text-decoration: none;
+				display: block;
+				transition: background-color 0.3s;
+			}
+				.dropdown-content a:hover {
+				background-color: #ddd;
+			}
+				.dropdown:hover .dropdown-content {
+				display: block;
+			}
+			/* Slideshow */
+				.slideshow-container {
+				max-width: 100%;
+				height: 400px;
+				overflow: hidden;
+				position: relative;
+			}
+			.mySlides {
+				display: none;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				transition: transform 0.5s ease;
+			}
+			.mySlides.active {
+				display: block;
+				transform: translateX(0);
+			}
+			.mySlides.next {
+				transform: translateX(100%);
+			}
+			.mySlides.prev {
+				transform: translateX(-100%);
+			}
+			.mySlides img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: center;
+			}
+			.slide-text {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				color: white;
+				text-align: center;
+				z-index: 4;
+			}
+			.overlay {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0, 0, 0, 0.5);
+				z-index: 2;
+			}
+			.slide-text h1 {
+				font-size: 36px;
+				margin: 0;
+			}
+			.slide-text p {
+				font-size: 18px;
+				margin: 5px 0 0;
+			}
+			.dot {
+				height: 12px;
+				width: 12px;
+				margin: 0 4px;
+				background-color: #bbb;
+				border-radius: 50%;
+				display: inline-block;
+				transition: background-color 0.6s ease;
+			}
+			.dot.active {
+				background-color: #f5755a;
+			}
+			/* Menu Section */
+				.container1 {
+				display: flex;
+				align-items: center;
+				margin: 20px 10%;
+				background-color: white;
+				border-radius: 10px;
+				box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+				overflow: hidden;
+			}
+			.text1 {
+			flex: 1;
+			padding: 20px;
+			}
+			.image {
+				flex: 1;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				overflow: hidden;
+			}
+			.image img {
+				width: 100%;
+				height: auto;
+				object-fit: cover;
+				border-radius: 10px 0 0 10px;
+				display: block;
+			}
+			h2 {
+				color: #333;
+			}
+			p {
+				line-height: 1.6;
+				color: #333;
+			}
+			.p1 {
+				line-height: 1.6;
+				color: white;
+			}
+    	</style>
+  	</head>
+  	<body>
+		<div class="topnav">
+		<a class="active" href="#home">Home</a>
+		<a href="#menu">Menu</a>
+		<div class="dropdown">
+			<button class="dropbtn">More</button>
+			<div class="dropdown-content">
+			<a href="#">Link 1</a>
+			<a href="#">Link 2</a>
+			<a href="#">Link 3</a>
+			</div>
+		</div>
+		</div>
+		<div class="slideshow-container">
+			<div class="mySlides active">
+				<img src="Restorant Pictures/Restorant 3.jpg">
+				<div class="overlay"></div>
+				<div class="slide-text">
+					<h1>Delicious Dishes</h1>
+					<p class="p1">Explore our exquisite menu crafted with love.</p>
+				</div>
+			</div>
+			<div class="mySlides next">
+				<img src="Restorant Pictures/Restorant 2.jpg">
+				<div class="overlay"></div>
+				<div class="slide-text">
+					<h1>Savory Haven</h1>
+					<p class="p1">a culinary sanctuary where flavors dance and aromas entice. Nestled in the heart of the city, this inviting restaurant offers a delightful escape from the ordinary. Our menu is a tapestry of global influences, showcasing seasonal ingredients and innovative techniques that elevate each dish to a work of art.</p>
+				</div>
+			</div>
+			<div class="mySlides">
+				<img src="Restorant Pictures/Restorant 3.jpg">
+				<div class="overlay"></div>
+				<div class="slide-text">
+					<h1>Fresh Ingredients</h1>
+					<p class="p1">Taste the difference with our locally sourced produce.</p>
+				</div>
+			</div>
+		<div style="text-align:center">
+			<span class="dot"></span>
+			<span class="dot"></span>
+			<span class="dot"></span>
+		</div>
+		</div>
+		<script>
+		let slideIndex = 0;
 
-        /* Navigation Bar */
-        .topnav {
-            height: 60px;
-            background-color: #444;
-            display: flex;
-            align-items: center;
-            padding: 0 20px;
-            position: fixed;
-            width: 100%;
-            z-index: 1;
-        }
-        .topnav a {
-            color: #f2f2f2;
-            text-decoration: none;
-            font-size: 18px;
-            padding: 14px 20px;
-            transition: background-color 0.3s;
-            margin-right: 10px; /* Spacing between nav items */
-        }
-        .topnav a:hover, .topnav a.active {
-            background-color: #f5755a;
-            color: white;
-        }
+		function showSlides() {
+			let slides = document.getElementsByClassName("mySlides");
+			slideIndex++;
+			if (slideIndex >= slides.length) {slideIndex = 0}
 
-        .dropdown {
-            position: relative;
-        }
-        .dropbtn {
-            background-color: #444;
-            color: white;
-            padding: 14px 20px;
-            border: none;
-            cursor: pointer;
-            font-size: 18px;
-            transition: background-color 0.3s;
-        }
-        .dropdown:hover .dropbtn {
-            background-color: #f5755a;
-        }
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f1f1f1;
-            min-width: 160px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-        }
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-        .dropdown-content a:hover {
-            background-color: #ddd;
-        }
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
+			for (let i = 0; i < slides.length; i++) {
+			slides[i].className = "mySlides";
+			}
 
-        /* Slideshow */
-        .slideshow-container {
-            position: relative;
-            max-width: 100%;
-            margin: 60px auto 20px auto; /* Adjusted margin for fixed nav */
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        }
-        .mySlides {
-            display: none;
-        }
-        .mySlides img {
-            width: 100%;
-            border-radius: 10px;
-            display: block; /* Prevents whitespace below images */
-        }
-        .text {
-            color: white;
-            font-size: 24px;
-            padding: 20px;
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-        }
-        .dot {
-            height: 12px;
-            width: 12px;
-            margin: 0 4px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-            transition: background-color 0.6s ease;
-        }
-        .dot.active {
-            background-color: #f5755a;
-        }
+			slides[slideIndex].className = "mySlides active";
+			slides[(slideIndex + 1) % slides.length].className = "mySlides next";
+			slides[(slideIndex - 1 + slides.length) % slides.length].className = "mySlides prev";
 
-        /* Menu Section */
-        .container1 {
-            display: flex;
-            align-items: center;
-            margin: 20px 10%;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            overflow: hidden;
-        }
-        .text1 {
-            flex: 1;
-            padding: 20px;
-        }
-        .image {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-        }
-        .image img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-            border-radius: 10px 0 0 10px;
-            display: block; /* Prevents whitespace below images */
-        }
-        h2 {
-            color: #333;
-        }
-        p {
-            line-height: 1.6;
-            color: #555;
-        }
-    </style>
-</head>
-<body>
-    <div class="topnav">
-        <div style="display: flex;">
-            <a class="active" href="#home">Home</a>
-            <a href="#menu">Menu</a>
-            <div class="dropdown">
-                <button class="dropbtn">Dropdown</button>
-                <div class="dropdown-content">
-                    <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
-                </div>
-            </div>
-        </div>
-    </div>
+			setTimeout(showSlides, 7500);
+		}
 
-    <div class="slideshow-container">
-        <div class="mySlides">
-            <img src="Restorant Pictures/Restorant 3.jpg">
-            <div class="text">Savory Haven - #1 Favorite Restaurant</div>
-        </div>
-        <div class="mySlides">
-            <img src="Restorant Pictures/Restorant 2.jpg">
-            <div class="text">Delicious Dishes Await You!</div>
-        </div>
-        <div class="mySlides">
-            <img src="Restorant Pictures/Restorant 3.jpg">
-            <div class="text">Experience Culinary Bliss!</div>
-        </div>
-        <div style="text-align:center">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-        </div>
-    </div>
-
-    <script>
-        let slideIndex = 0;
-        showSlides();
-        function showSlides() {
-            let i;
-            let slides = document.getElementsByClassName("mySlides");
-            let dots = document.getElementsByClassName("dot");
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {slideIndex = 1}
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex-1].style.display = "block";
-            dots[slideIndex-1].className += " active";
-            setTimeout(showSlides, 7500); // Change image every 7.5 seconds
-        }
-    </script>
-
-    <div class="container1">
-        <div class="text1">
-            <h2>Fried Chicken</h2>
-            <p>
-                Indulge in the ultimate comfort food experience with our crispy, golden fried chicken! Each piece is perfectly seasoned and fried to a mouthwatering crunch, locking in juicy flavor. Served hot and fresh, our fried chicken is paired with homemade sides that elevate your meal.
-            </p>
-        </div>
-        <div class="image">
-            <img src="Food/Fried Chicken.jpeg" alt="Fried Chicken">
-        </div>
-    </div>
-    <div class="container1">
-        <div class="image">
-            <img src="Food/Fried Rice.jpg" alt="Fried Rice">
-        </div>
-        <div class="text1">
-            <h2>Fried Rice</h2>
-            <p>
-                Indulge in our mouthwatering fried rice, a delightful medley of perfectly cooked grains tossed with vibrant vegetables and savory sauces.
-            </p>
-        </div>
-    </div>
-    <div class="container1">
-        <div class="text1">
-            <h2>Thai Tea</h2>
-            <p>
-                Experience the calming allure of our exquisite tea, a soothing blend of carefully sourced leaves that promise to invigorate your senses.
-            </p>
-        </div>
-        <div class="image">
-            <img src="Food/Thai Tea.webp" alt="Thai Tea">
-        </div>
-    </div>
-</body>
-<footer>
-    <div style="text-align:center; padding: 20px; background-color: #333; color: #f2f2f2;">
-        <p>&copy; 2024 Savory Haven. All Rights Reserved.</p>
-    </div>
-</footer>
+		showSlides();
+		</script>
+		<div class="container1">
+		<div class="text1">
+			<h2>Fried Chicken</h2>
+			<p>
+			Indulge in the ultimate comfort food experience with our crispy, golden fried chicken! Each piece is perfectly seasoned and fried to a mouthwatering crunch, locking in juicy flavor that will leave you craving more. Served hot and fresh, our fried chicken is paired with homemade sides that elevate your meal to a whole new level. Whether you’re enjoying a casual lunch or a family dinner, our chicken is sure to satisfy your taste buds.
+			</p>
+		</div>
+		<div class="image">
+			<img src="Food/Fried Chicken.jpeg" alt="Fried Chicken">
+		</div>
+		</div>
+		<div class="container1">
+		<div class="image">
+			<img src="Food/Fried Rice.jpg" alt="Fried Rice">
+		</div>
+		<div class="text1">
+			<h2>Fried Rice</h2>
+			<p>
+			Indulge in our mouthwatering fried rice, a delightful medley of perfectly cooked grains tossed with vibrant vegetables, succulent proteins, and a symphony of savory sauces. Each bite bursts with flavor, from the rich umami of soy sauce to the fragrant hints of garlic and ginger.
+			</p>
+		</div>
+		</div>
+		<div class="container1">
+		<div class="text1">
+			<h2>Thai Tea</h2>
+			<p>
+			Experience the calming allure of our exquisite tea, a soothing blend of carefully sourced leaves that promise to invigorate your senses. Each cup offers a journey through aromatic flavors, from the robust notes of black tea to the delicate whispers of green and herbal infusions.
+			</p>
+		</div>
+		<div class="image">
+			<img src="Food/Thai Tea.webp" alt="Thai Tea">
+		</div>
+		</div>
+		<footer style="text-align: center; padding: 20px; background-color: #333; color: white;">
+		&copy; 2024 Savory Haven. All rights reserved.
+		</footer>
+  </body>
 </html>
+
