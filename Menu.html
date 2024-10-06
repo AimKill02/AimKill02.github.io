@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Savory Haven Menu</title>
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f4f4f4;
+        }
+        .topnav {
+            height: 60px;
+            background-color: #333;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            position: sticky;
+            top: 0;
+            width: auto;
+            z-index: 1;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .topnav a {
+            color: #f2f2f2;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 14px 20px;
+            transition: background-color 0.3s, color 0.3s;
+            margin-right: 15px;
+        border-radius: 5px;
+        }
+        .topnav a:hover {
+            background-color: #f5755a;
+            color: white;
+        }
+        .dropdown {
+            position: relative;
+        }
+        .dropbtn {
+            background-color: #333;
+            color: white;
+            padding: 14px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+            .dropdown:hover .dropbtn {
+            background-color: #f5755a;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            border-radius: 5px;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s;
+        }
+            .dropdown-content a:hover {
+            background-color: black;
+        }
+            .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #f5755a;
+            padding-bottom: 10px;
+        }
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+        .price {
+            color: #f5755a;
+            font-weight: bold;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px 0;
+            background-color: #333;
+            color: white;
+            border-radius: 10px;
+        }
+        footer a {
+            color: white;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="Menu.html">Menu</a>
+        <div class="dropdown">
+            <button class="dropbtn">Recipes</button>
+            <div class="dropdown-content">
+                <a href="Thai Tea.html">Thai Tea</a>
+                <a href="Fried Rice.html">Fried Rice</a>
+                <a href="Fried Chicken.html">Fried Chicken</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Menu</h1>
+
+        <h2>Western Cuisine</h2>
+        <div class="menu-item">
+            <span>Grilled Steak</span>
+            <span class="price">IDR 350,000</span>
+        </div>
+        <div class="menu-item">
+            <span>Caesar Salad</span>
+            <span class="price">IDR 180,000</span>
+        </div>
+        <div class="menu-item">
+            <span>Mac and Cheese</span>
+            <span class="price">IDR 150,000</span>
+        </div>
+        <div class="menu-item">
+            <span>Spaghetti Carbonara</span>
+            <span class="price">IDR 200,000</span>
+        </div>
+        <div class="menu-item">
+            <span>BBQ Ribs</span>
+            <span class="price">IDR 300,000</span>
+        </div>
+        <div class="menu-item">
+            <span>Grilled Salmon</span>
+            <span class="price">IDR 320,000</span>
+        </div>
+
+        <h2>Asian Cuisine</h2>
+        <div class="menu-item">
+            <span>Fried Chicken</span>
+            <span class="price">IDR 220,000</span>
+        </div>
+        <div class="menu-item">
+            <span>Fried Rice</span>
+            <span class="price">IDR 160,000</span>
+        </div>
+        <div class="menu-item">
+            <span>Pad Thai</span>
+            <span class="price">IDR 180,000</span>
+        </div>
+        <div class="menu-item">
+            <span>Sushi Platter</span>
+            <span class="price">IDR 250,000</span>
+        </div>
+        <div class="menu-item">
+            <span>Green Curry</span>
+            <span class="price">IDR 200,000</span>
+        </div>
+
+        <h2>Drinks</h2>
+        <div class="menu-item">
+            <span>Coke</span>
+            <span class="price">IDR 30,000</span>
+        </div>
+        <div class="menu-item">
+            <span>Green Tea</span>
+            <span class="price">IDR 40,000</span>
+        </div>
+        <div class="menu-item">
+            <span>Lemonade</span>
+            <span class="price">IDR 50,000</span>
+        </div>
+        <div class="menu-item">
+            <span>Mineral Water</span>
+            <span class="price">IDR 20,000</span>
+        </div>
+        <div class="menu-item">
+            <span>Iced Coffee</span>
+            <span class="price">IDR 45,000</span>
+        </div>
+        <div class="menu-item">
+            <span>Fruit Smoothie</span>
+            <span class="price">IDR 70,000</span>
+        </div>
+        <div class="menu-item">
+            <span>Milkshake</span>
+            <span class="price">IDR 60,000</span>
+        </div>
+        <div class="menu-item">
+            <span>Herbal Tea</span>
+            <span class="price">IDR 40,000</span>
+        </div>
+        <div class="menu-item">
+            <span>Thai Tea</span>
+            <span class="price">IDR 60,000</span>
+        </div>
+    </div>
+
+    <footer>
+        <p class="p1">&copy; 2024 Savory Haven. All rights reserved.</p>
+        <p>
+            <a href="https://www.google.com/maps/place/Strategic+Location/@-6.200000,106.845599,15z" target="_blank" style="color: white; text-decoration: underline;">
+                Visit Us
+            </a>
+        </p>
+        <nav>
+            <ul style="list-style: none; padding: 0; display: flex; justify-content: center;">
+                <li style="margin: 0 10px;">
+                    <a href="https://www.facebook.com/" style="color: white; text-decoration: none;">Facebook</a>
+                </li>
+                <li style="margin: 0 10px;">
+                    <a href="https://www.instagram.com/" style="color: white; text-decoration: none;">Instagram</a>
+                </li>
+                <li style="margin: 0 10px;">
+                    <a href="https://x.com/home" style="color: white; text-decoration: none;">Twitter</a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>

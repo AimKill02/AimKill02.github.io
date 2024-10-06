@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Fried Chicken Recipe - Savory Haven</title>
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <link rel="icon" href="/Icon/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f4f4f4;
+        }
+        .topnav {
+            height: 60px;
+            background-color: #333;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            position: sticky;
+            top: 0;
+            width: auto;
+            z-index: 1;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .topnav a {
+            color: #f2f2f2;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 14px 20px;
+            transition: background-color 0.3s, color 0.3s;
+            margin-right: 15px;
+            border-radius: 5px;
+        }
+        .topnav a:hover, .topnav a.active {
+            background-color: #f5755a;
+            color: white;
+        }
+        .dropdown {
+            position: relative;
+        }
+        .dropbtn {
+            background-color: #333;
+            color: white;
+            padding: 14px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .dropdown:hover .dropbtn {
+            background-color: #f5755a;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            border-radius: 5px;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s;
+        }
+        .dropdown-content a:hover {
+            background-color: black;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        h2 {
+            color: #f5755a;
+        }
+        p {
+            line-height: 1.6;
+            color: #333;
+        }
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f5755a;
+            color: white;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+        .p1 {
+            color: white;
+        }
+        .feedback-form {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .feedback-form input[type="text"], .feedback-form input[type="email"], .feedback-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .feedback-form button {
+            background-color: #f5755a;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .feedback-form button:hover {
+            background-color: #e64a43;
+        }
+    </style>
+    <script>
+        function submitFeedback(event) {
+            event.preventDefault(); // Prevent the form from submitting the traditional way
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            alert(`Thank you for your feedback, ${name}! We will contact you at ${email} soon.`);
+            // Optionally, you can send the feedback data to a server here
+        }
+    </script>
+</head>
+<body>
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="Menu.html">Menu</a>
+        <div class="dropdown">
+            <button class="dropbtn">Recipes</button>
+            <div class="dropdown-content">
+                <a href="Thai Tea.html">Thai Tea</a>
+                <a href="Fried Rice.html">Fried Rice</a>
+                <a href="Fried Chicken.html">Fried Chicken</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <img src="Food\Fried Chicken2.png" width="100%">
+        <h1>Fried Chicken Recipe</h1>
+        <h2>Ingredients:</h2>
+        <ul>
+            <li>1 whole chicken (cut into pieces)</li>
+            <li>2 cups buttermilk</li>
+            <li>2 cups all-purpose flour</li>
+            <li>1 tablespoon paprika</li>
+            <li>1 teaspoon garlic powder</li>
+            <li>1 teaspoon onion powder</li>
+            <li>1 teaspoon salt</li>
+            <li>1/2 teaspoon black pepper</li>
+            <li>Oil for frying</li>
+        </ul>
+
+        <h2>Instructions:</h2>
+        <table>
+            <tr>
+                <th>Step</th>
+                <th>Instruction</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>In a large bowl, soak the chicken pieces in buttermilk for at least 2 hours (or overnight).</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>In another bowl, mix the flour, paprika, garlic powder, onion powder, salt, and pepper.</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Heat oil in a deep skillet or fryer over medium-high heat.</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Remove the chicken from the buttermilk, letting the excess drip off, then dredge in the flour mixture until well coated.</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Carefully place the coated chicken in the hot oil and fry until golden brown and cooked through (about 15-20 minutes).</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Remove the chicken and place it on paper towels to drain excess oil.</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Serve hot with your favorite sides!</td>
+            </tr>
+        </table>
+
+        <div class="feedback-form">
+            <h2>Feedback</h2>
+            <form onsubmit="submitFeedback(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p class="p1">&copy; 2024 Savory Haven. All rights reserved.</p>
+        <p>
+            <a href="https://www.google.com/maps/place/Strategic+Location/@-6.200000,106.845599,15z" target="_blank" style="color: white; text-decoration: underline;">
+                Visit Us
+            </a>
+        </p>
+        <nav>
+            <ul style="list-style: none; padding: 0; display: flex; justify-content: center;">
+                <li style="margin: 0 10px;">
+                    <a href="https://www.facebook.com/" style="color: white; text-decoration: none;">Facebook</a>
+                </li>
+                <li style="margin: 0 10px;">
+                    <a href="https://www.instagram.com/" style="color: white; text-decoration: none;">Instagram</a>
+                </li>
+                <li style="margin: 0 10px;">
+                    <a href="https://x.com/home" style="color: white; text-decoration: none;">Twitter</a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>
